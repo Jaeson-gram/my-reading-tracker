@@ -35,12 +35,30 @@ public class Book {
         return progress;
     }
 
+    //setters
     public void setProgress(int progress) {
         this.progress = progress;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
+    }
+
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
     }
 
     public String progress(){
         int percentage = (this.progress * 100) / pageCount() ;
         return percentage + "%";
     }
+
+    public String bookDetails(String bookName){
+        return String.format("%s - %s %s/%s (%s)%n", name(), author(), getProgress(), pageCount(), progress());
+    }
+
 }
