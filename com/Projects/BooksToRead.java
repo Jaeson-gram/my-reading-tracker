@@ -1,12 +1,13 @@
 package com.Projects;
 import java.util.List;
 
-import static java.lang.VersionProps.println;
-
 
 public class BooksToRead {
 
     private List<Book> bookList;
+//
+//    public BooksToRead() {
+//    }
 
     public BooksToRead(List<Book> bookList) {
         this.bookList = bookList;
@@ -19,9 +20,21 @@ public class BooksToRead {
     }
 
     public void listBooks(){
-        for (var book : bookList){
-            System.out.printf("%s - %s %s/%s (%s)%n", book.name(), book.author(), book.getProgress(), book.pageCount(), book.progress());
-            println();
+        if (bookList.isEmpty()) {
+            System.out.println("This list is empty!");
+        }
+        else{
+            for (var book : bookList) {
+                System.out.printf("%s - %s %s/%s (%s)%n", book.name(), book.author(), book.getProgress(), book.pageCount(), book.progress());
+            }
         }
     }
+
+//    public void bookDetails(String bookName){
+//        for (Book book : bookList) {
+//            if (book.name().equalsIgnoreCase(bookName)){
+//                System.out.printf("%s - %s %s/%s (%s)%n", book.name(), book.author(), book.getProgress(), book.pageCount(), book.progress());
+//            }
+//        }
+//    }
 }
