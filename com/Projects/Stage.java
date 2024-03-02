@@ -12,9 +12,11 @@ public class Stage {
     public static void main(String[] args) {
         Book TheCaller = new Book("The Caller", "Chris Carter", 425, 285);
         Book theRuthlessElimination = new Book("The Ruthless Elimination of Hurry", "John Mark", 225, 57);
+        Book howSuccessfulPeopleThink = new Book("How Successful People Think", "John C. Maxwell", 123, 10);
 
         booksReading.add(TheCaller);
         booksReading.add(theRuthlessElimination);
+        booksReading.add(howSuccessfulPeopleThink);
 
 
         BooksToRead books = new BooksToRead(booksReading);
@@ -24,14 +26,20 @@ public class Stage {
 
         books.listBooks();
 
+        System.out.println(); //line breaker
+
         updateBookProgress();
 
     }
 
     public static void updateBookProgress(){
+        System.out.print("--".repeat(5));
+        System.out.print("Update Progress");
+        System.out.println("--".repeat(5));
+
         Book book = new Book("", "", 0, 0);
 
-        System.out.println("Which book did you read?");
+        System.out.println("Which book did you read today?");
         var bookName = scanner.nextLine();
 
         System.out.println("Oh, which page did you read up to? (eg: '256' without the '')");
