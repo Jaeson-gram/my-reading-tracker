@@ -24,8 +24,10 @@ public class BooksToRead {
             System.out.println("This list is empty!");
         }
         else{
+            System.out.println("Reading List:");
             for (var book : bookList) {
-                System.out.printf("%s - %s %s/%s (%s)%n", book.name(), book.author(), book.getProgress(), book.pageCount(), book.progress());
+
+                System.out.printf("%s - %s %n", book.name(), book.author()); //, book.getProgress(), book.pageCount(), book.progress());
             }
         }
     }
