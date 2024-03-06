@@ -29,6 +29,8 @@ public class Stage {
         System.out.println(); //line breaker
 
         updateBookProgress();
+        addBook();
+//        books.listBooks();
 
     }
 
@@ -58,9 +60,28 @@ public class Stage {
         }
     }
 
-    public void addBook(Book book) {
+    public static void addBook() {
 
-//        System.out.println("Not sure you told me about that book before. Do you want to add it to your 'booksToRead' library? (Y/N)");
+        System.out.print("--".repeat(5));
+        System.out.print("Add Book");
+        System.out.println("--".repeat(5));
+
+        System.out.println("What is the name of the book do you want to add to your 'booksToRead' library? (Camel Case)");
+        var newBook = scanner.nextLine();
+
+        System.out.println("What is the name of the author?");
+        var newBookAuthor = scanner.nextLine();
+
+        System.out.println("how many pages all together?");
+        var newBookPageCount = scanner.nextInt();
+
+        booksReading.add(new Book(newBook, newBookAuthor, newBookPageCount));
+
+        System.out.println("Your book has been added successfully!\nYou can now start reading and updating your progress");
+        // System.out.println("here's the updated list:");
+
+
+
 //        if (scanner.nextLine().equalsIgnoreCase("y")){
 //            book.setName(bookName);
 //            System.out.println("What's the name of the author?");
@@ -75,6 +96,7 @@ public class Stage {
 //        else {
 //            System.out.println("Aye! see ya!");
 //        }
+        // Momo :) - 08171188886
 //    }
 //
     }
